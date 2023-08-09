@@ -7,6 +7,10 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -33,4 +37,23 @@ ul {
 img {
     max-width: 100%;
     height: auto;
+}
+
+button,
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --primary: #1e4d91;
+    --white: #ffffff;
+    --black: #000000;
+    --blude-fade: #7994bc;
+    --red: #e2736f;
+    --gray: #d5d5d5;
 }

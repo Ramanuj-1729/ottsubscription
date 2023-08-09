@@ -1,0 +1,35 @@
+.wrapper {
+    height: 100vh;
+    background-color: var(--primary);
+}
+
+.inputWrapper {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.91;
+}
+
+.inputWrapper input {
+    display: block;
+    width: 20rem;
+    padding: 8px;
+    border: 2px solid var(--gray);
+    color: var(--black);
+    border-radius: 5px;
+}
+
+.rememberWrapper {
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.rememberWrapper input {
+    border: 3px solid var(--primary);
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
