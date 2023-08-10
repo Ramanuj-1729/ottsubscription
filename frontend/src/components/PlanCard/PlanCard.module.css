@@ -1,0 +1,73 @@
+.cardWrapper {
+    height: 100%;
+}
+
+.cardHead {
+    margin: 0 20px;
+}
+
+.cardWrapper ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardWrapper ul li:first-child {
+    position: relative;
+    width: 131px;
+    height: 131px;
+    background: var(--blue-fade);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cardWrapper ul li:not(:first-child) {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.95;
+    border-bottom: 2px solid var(--gray);
+    width: 100%;
+    padding: 20px 0;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardWrapper ul li:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+.cardWrapper ul li:last-child div {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.cardWrapper ul:hover li:not(:first-child) {
+    color: var(--primary);
+    font-weight: 600;
+    opacity: 1;
+}
+
+.cardWrapper ul:hover li:first-child {
+    background-color: var(--primary);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary);
+    bottom: -8px;
+    rotate: 45deg;
+}
+
+.cardWrapper ul:hover .tooltip {
+    display: inline;
+}
+

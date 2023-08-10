@@ -1,8 +1,8 @@
 import styles from './PrimaryButton.module.css';
 
-const PrimaryButton = ({buttonName, width}) => {
+const PrimaryButton = ({buttonName, width, onClick}) => {
     return (
-        <button style={{width: width}} className={styles.btn}>{buttonName}</button>
+        <button onClick={onClick} style={{width: width}} className={styles.btn}>{buttonName}</button>
     );
 }
 

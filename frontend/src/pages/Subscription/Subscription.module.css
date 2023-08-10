@@ -1,0 +1,68 @@
+.subscriptionScreen {
+    height: 100vh;
+    background-color: var(--white);
+    flex-direction: column;
+}
+
+.subscriptionScreen h2 {
+    font-size: 30px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.plansWrapper{
+    margin: 2rem 0;
+}
+
+.featuresWrapper {
+    margin-bottom: auto;
+}
+
+.toggleBtn {
+    background-color: var(--primary);
+    display: inline-block;
+    padding: 12px;
+    border-radius: 50px;
+    margin: 2rem 0;
+}
+
+.toggleBtn button:first-child {
+    margin-right: 16px;
+}
+
+.toggleBtn button {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btnStyle {
+    color: var(--white);
+    background-color: var(--primary);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.active {
+    background-color: var(--white);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.features li:not(:first-child) {
+    margin-left: 24px;
+}
+
+.features li:not(:first-child) {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.95;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--gray);
+}
+
+.features li:last-child {
+    border: none;
+    padding-bottom: 0;
+}

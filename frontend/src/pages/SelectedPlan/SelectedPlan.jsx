@@ -1,6 +1,8 @@
 import styles from './SelectedPlan.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const SelectedPlan = () => {
+    const navigate = useNavigate();
     return (
         <div className={`${styles.planScreen} flex-center`}>
             <div className={`${styles.cardWrapper}`}>
@@ -16,7 +18,7 @@ const SelectedPlan = () => {
 
                 <div className={styles.price}>₹ 2,000<span>/yr</span></div>
 
-                <button className={styles.mainBtn}>Change Plan</button>
+                <button onClick={()=>navigate('/subscription')} className={styles.mainBtn}>Change Plan</button>
 
                 <div className={styles.warn}>
                     Your subscription has started on <span>Jul 11th, 2022</span> and will auto renew on <span>Jul 12th, 2023</span>.

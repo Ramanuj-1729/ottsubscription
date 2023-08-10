@@ -1,10 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import styles from '../Auth.module.css';
 import FormWrapper from '../../../components/FormWrapper/FormWrapper';
 
+
 const Login = () => {
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate('/subscription');
+    }
     return (
         <div className={`${styles.wrapper} flex-center`}>
-            <FormWrapper formHeading="Login to your account" buttonName="Login" routeText="New to MyApp?" routeLink="register" routeLinkText="Sign Up">
+            <FormWrapper formHeading="Login to your account" buttonName="Login" routeText="New to MyApp?" routeLink="register" routeLinkText="Sign Up" btnClick={handleSubmit}>
                 <div className={styles.inputWrapper}>
                     <label htmlFor="email">Email</label>
                     <input id='email' type="email" placeholder='Enter Email' />
