@@ -52,7 +52,7 @@ const loginController = {
         if (error) {
             return next(error);
         }
-
+        
         try {
             await RefreshToken.deleteOne({ token: req.body.refresh_token });
         } catch (err) {

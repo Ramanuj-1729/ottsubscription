@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from './PlanCard.module.css';
 
-const PlanCard = ({ cardHeading, price, quality, resolution }) => {
+const PlanCard = ({ cardHeading, price, quality, resolution, devices }) => {
     const cardWrapperRef = useRef(null);
     useEffect(() => {
 

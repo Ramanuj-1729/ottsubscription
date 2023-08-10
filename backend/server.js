@@ -4,6 +4,7 @@ import { APP_PORT, DB_URL } from './config';
 const app = express();
 import routes from './routes';
 import cors from 'cors';
+import path from 'path';
 
 // DB Connection
 mongoose.connect(DB_URL, {
@@ -17,6 +18,7 @@ db.once('open', () => {
     console.log('DB connected...');
 });
 
+global.appRoot = path.resolve(__dirname);
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
