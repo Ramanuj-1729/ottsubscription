@@ -1,0 +1,82 @@
+.paymentScreen {
+    height: 100vh;
+}
+
+.cardWrapper {
+    display: flex;
+}
+
+.cardInfo {
+    background-color: var(--white);
+    padding: 30px 28px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cardInfo h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.cardInfo p {
+    font-size: 15px;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.inputWrapper {
+    border: 2px solid var(--gray);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--gray);
+    margin: 1.5rem 0;
+}
+
+.inputWrapper input {
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cardNumberInput {
+    margin-left: 5px;
+    width: 16rem;
+}
+
+.expiryDateInput input{
+    width: 32px;
+}
+
+.inputWrapper .cvvInput {
+    width: 40px;
+}
+
+.orderSummary {
+    background-color: var(--gray2);
+    border-radius: 0px 10px 10px 0px;
+    flex-direction: column;
+    padding: 30px 28px;
+}
+
+.orderSummary h4 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.orderSummary > div {
+    border-bottom: 2px solid var(--gray);
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+.orderSummary div > span:first-child {
+    font-weight: 400;
+}
+
+.orderSummary div > span:last-child {
+    font-weight: 500;
+}
