@@ -1,9 +1,9 @@
-import Joi from 'joi';
-import { User, RefreshToken } from '../../models';
-import CustomErrorHandler from '../../services/CustomErrorHandler';
-import bcrypt from 'bcrypt';
-import JwtService from '../../services/JwtService';
-import { REFRESH_SECRET } from '../../config';
+const Joi = require('joi');
+const { User, RefreshToken } = require('../../models');
+const CustomErrorHandler = require('../../services/CustomErrorHandler');
+const bcrypt = require('bcrypt');
+const JwtService = require('../../services/JwtService');
+const { REFRESH_SECRET } = require('../../config');
 
 const loginController = {
     async login(req, res, next) {
@@ -62,4 +62,4 @@ const loginController = {
     }
 };
 
-export default loginController;
+module.exports = loginController;

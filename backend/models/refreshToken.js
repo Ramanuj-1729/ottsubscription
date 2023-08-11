@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const refreshTokenSchema = new Schema({
     token: { type: String, unique: true },
 }, { timestamps: false });
 
-export default mongoose.model('RefreshToken', refreshTokenSchema, 'refreshTokens');
+module.exports = mongoose.model('RefreshToken', refreshTokenSchema, 'refreshTokens');

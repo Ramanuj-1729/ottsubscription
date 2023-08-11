@@ -1,5 +1,5 @@
-import CustomErrorHandler from '../services/CustomErrorHandler';
-import JwtService from '../services/JwtService';
+const CustomErrorHandler  = require('../services/CustomErrorHandler');
+const JwtService = require('../services/JwtService') ;
 
 const auth = async (req, res, next) => {
     let authHeader = req.headers.authorization;

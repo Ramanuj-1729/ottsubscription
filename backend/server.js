@@ -1,10 +1,10 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import { APP_PORT, DB_URL } from './config';
+const express = require('express') ;
+const mongoose = require( 'mongoose');
+const { APP_PORT, DB_URL } = require('./config');
 const app = express();
-import routes from './routes';
-import cors from 'cors';
-import path from 'path';
+const routes = require('./routes') ;
+const cors = require('cors') ;
+const path = require('path') ;
 
 // DB Connection
 mongoose.connect(DB_URL, {

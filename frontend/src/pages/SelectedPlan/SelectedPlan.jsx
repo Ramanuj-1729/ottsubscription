@@ -23,7 +23,7 @@ const SelectedPlan = () => {
                 <button onClick={()=>navigate('/subscription')} className={styles.mainBtn}>Change Plan</button>
 
                 <div className={styles.warn}>
-                    Your subscription has started on <span>Jul 11th, 2022</span> and will auto renew on <span>Jul 12th, 2023</span>.
+                    Your subscription has started on <span>Aug 12th, 2023</span> and will auto renew on <span>Sept 12th, 2023</span>.
                 </div>
             </div>
         </div>

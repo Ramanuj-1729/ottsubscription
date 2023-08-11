@@ -1,8 +1,8 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import { registerController, loginController, plansController } from '../controllers';
-import auth from '../middlewares/auth';
-import paymentController from '../controllers/paymentController';
+const { registerController, loginController, plansController } = require('../controllers');
+const auth = '../middlewares/auth';
+const paymentController = require('../controllers/paymentController');
 
 router.post('/register', registerController.register);
 router.post('/login', loginController.login);
@@ -12,4 +12,4 @@ router.get('/monthly-plans', plansController.getMonthlyPlans);
 router.get('/yearly-plans', plansController.getYearlyPlans);
 router.post('/payment', paymentController.createPaymentIntent);
 
-export default router;
+module.exports = router;

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const plansSchema = new Schema({
@@ -10,4 +10,4 @@ const plansSchema = new Schema({
     devices: {type: Array, default: [], required: true}
 }, { timestamps: true });
 
-export default mongoose.model('Plan', plansSchema, 'plans');
+module.exports = mongoose.model('Plan', plansSchema, 'plans');

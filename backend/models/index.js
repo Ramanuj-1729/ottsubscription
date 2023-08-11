@@ -1,3 +1,5 @@
-export { default as User } from './user';
-export { default as RefreshToken } from './refreshToken';
-export { default as Plans } from './plans';
+const User = require('./user');
+const RefreshToken = require('./refreshToken');
+const Plans = require('./plans');
+
+module.exports = { User, RefreshToken, Plans };

@@ -1,4 +1,6 @@
-export { default as registerController } from './auth/registerController';
-export { default as loginController } from './auth/loginController';
-export {default as plansController } from './plansController';
-export {default as paymentController } from './paymentController';
+const registerController = require('./auth/registerController');
+const loginController = require('./auth/loginController');
+const plansController = require('./plansController');
+const paymentController = require('./paymentController');
+
+module.exports = {registerController, loginController, plansController, paymentController};

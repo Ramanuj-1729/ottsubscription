@@ -15,4 +15,4 @@ const paymentController = {
         }
     }
 }
-export default paymentController;
+module.exports = paymentController;

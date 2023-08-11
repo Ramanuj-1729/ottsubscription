@@ -1,5 +1,5 @@
-import Joi from 'joi';
-import { Plans } from '../models';
+const Joi = require('joi') ;
+const { Plans } = require('../models') ;
 
 const plansController = {
     async createPlans(req, res, next) {
@@ -71,4 +71,4 @@ const plansController = {
     },
 }
 
-export default plansController;
+module.exports = plansController;

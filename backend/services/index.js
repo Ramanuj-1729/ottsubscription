@@ -1,2 +1,4 @@
-export { default as CustomErrorHandler } from './CustomErrorHandler';
-export { default as JwtService } from './JwtService';
+const CustomErrorHandler = require('./CustomErrorHandler');
+const JwtService = require('./JwtService');
+
+module.exports = { CustomErrorHandler, JwtService };

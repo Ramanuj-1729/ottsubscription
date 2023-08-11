@@ -1,5 +1,5 @@
-import { JWT_SECRET } from '../config';
-import jwt from 'jsonwebtoken';
+const { JWT_SECRET } = require('../config') ;
+const jwt = require('jsonwebtoken') ;
 
 class JwtService {
     static sign(payload, expiry = '1y', secret = JWT_SECRET) {
@@ -11,4 +11,4 @@ class JwtService {
     }
 }
 
-export default JwtService;
+module.exports = JwtService;
