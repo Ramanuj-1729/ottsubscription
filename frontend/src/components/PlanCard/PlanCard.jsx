@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from './PlanCard.module.css';
 
-const PlanCard = ({ cardHeading, price, quality, resolution, devices }) => {
+const PlanCard = ({ planId, cardHeading, price, quality, resolution, devices, onClick }) => {
     const cardWrapperRef = useRef(null);
     useEffect(() => {
 
@@ -36,7 +36,7 @@ const PlanCard = ({ cardHeading, price, quality, resolution, devices }) => {
     }
 
     return (
-        <div ref={cardWrapperRef} onClick={() => setCardActive(true)} className={styles.cardWrapper}>
+        <div ref={cardWrapperRef} onClick={() => {setCardActive(true); onClick(planId)}} className={styles.cardWrapper}>
             <ul>
                 <li style={cardActive === true ? cardHeadStyle : {}} className={`${styles.cardHead} flex-center`}>{cardHeading}
                     <span className={styles.tooltip}></span>
