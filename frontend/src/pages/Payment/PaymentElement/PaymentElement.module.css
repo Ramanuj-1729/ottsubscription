@@ -1,0 +1,6 @@
+.cardElement {
+    border: 2px solid var(--gray);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 16px 0;
+}

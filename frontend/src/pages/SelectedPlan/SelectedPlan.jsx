@@ -1,7 +1,9 @@
 import styles from './SelectedPlan.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const SelectedPlan = () => {
+    const { planData } = useSelector((state) => state.planSlice);
     const navigate = useNavigate();
     return (
         <div className={`${styles.planScreen} flex-center`}>
@@ -13,10 +15,10 @@ const SelectedPlan = () => {
 
                 <button className={styles.cancleBtn}>Cancel</button>
 
-                <span className={styles.plan}>Basic</span>
+                <span className={styles.plan}>{planData.title}</span>
                 <span className={styles.device}>Phone+Tablet</span>
 
-                <div className={styles.price}>₹ 2,000<span>/yr</span></div>
+                <div className={styles.price}>₹ {planData.price}<span>/{planData.duration === "Monthly" ? "mo" : "yr"}</span></div>
 
                 <button onClick={()=>navigate('/subscription')} className={styles.mainBtn}>Change Plan</button>
 

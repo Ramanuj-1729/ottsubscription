@@ -1,9 +1,13 @@
 import styles from './Payment.module.css';
-import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import { useSelector } from 'react-redux';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import PaymentElement from './PaymentElement/PaymentElement';
+
+const stripePromise = loadStripe('pk_test_51NdqtISEDKkoqmSTm8m11oENLJBcHTeW2J19LpumcOsP88Jl4uPAEA3rB7AeWi9RuJ4g85Apdv3dwoJc4fjvph3j00J6NUZ0so');
 
 const Payment = () => {
-    const {planData} = useSelector((state)=>state.planSlice);
+    const { planData } = useSelector((state) => state.planSlice);
 
     return (
         <div className={`${styles.paymentScreen} flex-center`}>
@@ -11,21 +15,9 @@ const Payment = () => {
                 <div className={styles.cardInfo}>
                     <h3>Complete Payment</h3>
                     <p>Enter your credit or debit card details below</p>
-                    <div className={`${styles.inputWrapper} flex-center`}>
-                        <div>
-                            <i className="fa-solid fa-credit-card"></i>
-                            <input className={styles.cardNumberInput} type="text" name="" id="cardNumber" placeholder='Card Number' required />
-                        </div>
-
-                        <div className={`${styles.expiryDateInput} flex-center`}>
-                            <input type="text" id="expirationMonth" name="expirationMonth" pattern="\d{2}" maxLength="2" placeholder="MM" required />
-                            <span>/</span>
-                            <input type="text" id="expirationYear" name="expirationYear" pattern="\d{2}" maxLength="2" placeholder="YY" required />
-                        </div>
-
-                        <input className={styles.cvvInput} type="text" placeholder='CVV' required />
-                    </div>
-                    <PrimaryButton buttonName="Confirm Payment" width="45%" />
+                    <Elements stripe={stripePromise}>
+                        <PaymentElement />
+                    </Elements>
                 </div>
                 <div className={`${styles.orderSummary} flex-center`}>
                     <h4>Order Summary</h4>
