@@ -5,12 +5,14 @@ import Login from './pages/auth/Login/Login';
 import Subscription from './pages/Subscription/Subscription';
 import Payment from './pages/Payment/Payment';
 import SelectedPlan from './pages/SelectedPlan/SelectedPlan';
+import Home from './pages/Home/Home';
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route>
+          <Route path="/" element={<Home />} />
           <Route path="auth/register" element={<Register />} />
           <Route path="auth/login" element={<Login />} />
           <Route path="subscription" element={<Subscription />} />
