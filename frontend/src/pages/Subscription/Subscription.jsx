@@ -26,15 +26,15 @@ const Subscription = () => {
 
     useEffect(() => {
         const getMonthlyPlans = async () => {
-            const res = await axios.get("/monthly-plans");
+            const res = await axios.get("https://stripe-api-wgv3.onrender.com/api/monthly-plans");
             setMonthlyPlans(res.data);
         }
         const getYearlyPlans = async () => {
-            const res = await axios.get("/yearly-plans");
+            const res = await axios.get("https://stripe-api-wgv3.onrender.com/api/yearly-plans");
             setYearlyPlans(res.data);
         }
         const getAllPlans = async () => {
-            const res = await axios.get("/plans");
+            const res = await axios.get("https://stripe-api-wgv3.onrender.com/api/plans");
             setAllPlans(res.data);
         }
         getMonthlyPlans();

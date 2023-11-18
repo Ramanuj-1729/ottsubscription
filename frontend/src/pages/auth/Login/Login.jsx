@@ -20,7 +20,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data: res } = await axios.post("/login", data);
+            const { data: res } = await axios.post("https://stripe-api-wgv3.onrender.com/api/login", data);
             navigate('/subscription');
         } catch (error) {
             if (

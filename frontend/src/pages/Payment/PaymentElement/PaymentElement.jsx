@@ -30,7 +30,7 @@ const PaymentElement = () => {
             setPaymentSuccess(false);
         } else {
             try {
-                const { data } = await axios.post('/payment', {
+                const { data } = await axios.post('https://stripe-api-wgv3.onrender.com/api/payment', {
                     amount: planData.price * 100,
                 });
 
